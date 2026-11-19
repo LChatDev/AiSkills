@@ -16,6 +16,8 @@
 | NoDatabase | Сайты без баз данных, хранение в JSON/TXT и файлах | [SKILL.md](NoDatabase/SKILL.md) |
 | AppConverter | Преобразование сайтов в PWA, APK и desktop-приложения | [SKILL.md](AppConverter/SKILL.md) |
 | PHPEncrypt | Обфускация и минификация собственных PHP-исходников | [SKILL.md](PHPEncrypt/SKILL.md) |
+| Replica | Воссоздание игр Roblox, сайтов, плагинов и приложений по референсам | [SKILL.md](Replica/SKILL.md) |
+| APKMaster | Android-приложения студийного качества: дизайн, разработка, QA и сборка | [SKILL.md](APKMaster/SKILL.md) |
 
 ## AutoDev — промпт для подключения
 
@@ -197,9 +199,45 @@ https://raw.githubusercontent.com/LChatDev/AiSkills/main/PHPEncrypt/SKILL.md
 
 [Открыть PHPEncrypt](PHPEncrypt/SKILL.md) · [RAW](https://raw.githubusercontent.com/LChatDev/AiSkills/main/PHPEncrypt/SKILL.md)
 
+## Replica — промпт для подключения
+
+Скопируй следующий промпт в своего ИИ-агента:
+
+```text
+Скачай скилл Replica:
+
+https://raw.githubusercontent.com/LChatDev/AiSkills/main/Replica/SKILL.md
+
+Прочитай SKILL.md полностью. Если среда поддерживает Agent Skills, установи файл как replica/SKILL.md. Иначе используй его как инструкции текущей задачи.
+
+Изучи предоставленный референс максимально подробно. Составь матрицу функций, экранов, игровых механик и состояний. Реализуй наблюдаемое поведение самостоятельно и используй оригинальные или разрешённые ресурсы. Для Roblox проверь строительство, управление, мир и мультиплеер; для сайтов — интерфейс, API и адаптивность; для плагинов — команды, конфигурацию и совместимость. Собери проект в нужном формате и сравни реальную работу с референсом. Укажи отличия и непроверенные функции.
+
+Сообщи об успешном подключении или конкретной причине, почему оно невозможно.
+```
+
+[Открыть Replica](Replica/SKILL.md) · [RAW](https://raw.githubusercontent.com/LChatDev/AiSkills/main/Replica/SKILL.md)
+
+## APKMaster — промпт для подключения
+
+Скопируй следующий промпт в своего ИИ-агента:
+
+```text
+Скачай скилл APKMaster:
+
+https://raw.githubusercontent.com/LChatDev/AiSkills/main/APKMaster/SKILL.md
+
+Прочитай SKILL.md полностью. Если среда поддерживает Agent Skills, установи файл как apkmaster/SKILL.md. Иначе используй его как инструкции текущей задачи.
+
+Работай как профессиональная Android-студия. Создай законченный красивый продукт: оригинальный GUI, иконка, темы, анимации, полноценные функции, обработка ошибок, адаптивность и доступность. Предпочитай нативный Kotlin/Compose для новых проектов, если это подходит требованиям. Выполни тесты, lint, сборку APK, проверку подписи и установку на эмуляторе или устройстве при наличии среды. Исправь выявленные проблемы. Предоставь реальный APK, исходники, результаты QA и ограничения; не выдумывай успешные проверки.
+
+Сообщи об успешном подключении или конкретной причине, почему оно невозможно.
+```
+
+[Открыть APKMaster](APKMaster/SKILL.md) · [RAW](https://raw.githubusercontent.com/LChatDev/AiSkills/main/APKMaster/SKILL.md)
+
 ## Совместное использование
 
-При разработке приложений с GUI можно подключить оба скилла: AutoDev отвечает за программирование, сборку и тестирование, Interface — за дизайн и пользовательский интерфейс. BackendMaster проектирует и настраивает серверную часть, SecurityTester выполняет защитные проверки, SlopConveyor организует повторяющиеся циклы улучшений, HostTips предлагает практические способы оптимизации хостинга. ThemeFactory отвечает за темы, NoDatabase — за файловое хранение, AppConverter — за упаковку сайтов в приложения, PHPEncrypt — за защиту собственных PHP-исходников. Для работы по времени нужен отдельный поддерживаемый планировщик или долгоживущий агент.
+При разработке приложений с GUI можно подключить оба скилла: AutoDev отвечает за программирование, сборку и тестирование, Interface — за дизайн и пользовательский интерфейс. BackendMaster проектирует и настраивает серверную часть, SecurityTester выполняет защитные проверки, SlopConveyor организует повторяющиеся циклы улучшений, HostTips предлагает практические способы оптимизации хостинга. ThemeFactory отвечает за темы, NoDatabase — за файловое хранение, AppConverter — за упаковку сайтов в приложения, PHPEncrypt — за защиту собственных PHP-исходников. Replica помогает воссоздавать продукты по референсам, APKMaster — создавать профессиональные Android-приложения. Для работы по времени нужен отдельный поддерживаемый планировщик или долгоживущий агент.
 
 ## Установка вручную
 
@@ -207,6 +245,6 @@ https://raw.githubusercontent.com/LChatDev/AiSkills/main/PHPEncrypt/SKILL.md
 git clone https://github.com/LChatDev/AiSkills.git
 ```
 
-Размести нужные файлы SKILL.md в каталогах скиллов своего агента. Если агент требует совпадения имени папки с полем name в метаданных, используй имена autodev, interface, securitytester, slopconveyor, backendmaster, hosttips, themefactory, nodatabase, appconverter и phpencrypt.
+Размести нужные файлы SKILL.md в каталогах скиллов своего агента. Если агент требует совпадения имени папки с полем name в метаданных, используй имена autodev, interface, securitytester, slopconveyor, backendmaster, hosttips, themefactory, nodatabase, appconverter, phpencrypt, replica и apkmaster.
 
 Скиллы являются текстовыми инструкциями для ИИ, а не исполняемыми плагинами. Доступные возможности зависят от инструментов конкретного агента.
