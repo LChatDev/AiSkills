@@ -12,6 +12,10 @@
 | SlopConveyor | Повторяющийся конвейер измеримых улучшений | [SKILL.md](SlopConveyor/SKILL.md) |
 | BackendMaster | Бэкенд, API, хранение, конфигурация и развёртывание | [SKILL.md](BackendMaster/SKILL.md) |
 | HostTips | Лайфхаки для хостингов, VPS, кеширование, экономия ресурсов и диагностика | [SKILL.md](HostTips/SKILL.md) |
+| ThemeFactory | Темы, конструктор дизайна, шаблоны и настройки оформления | [SKILL.md](ThemeFactory/SKILL.md) |
+| NoDatabase | Сайты без баз данных, хранение в JSON/TXT и файлах | [SKILL.md](NoDatabase/SKILL.md) |
+| AppConverter | Преобразование сайтов в PWA, APK и desktop-приложения | [SKILL.md](AppConverter/SKILL.md) |
+| PHPEncrypt | Обфускация и минификация собственных PHP-исходников | [SKILL.md](PHPEncrypt/SKILL.md) |
 
 ## AutoDev — промпт для подключения
 
@@ -121,9 +125,81 @@ https://raw.githubusercontent.com/LChatDev/AiSkills/main/HostTips/SKILL.md
 
 [Открыть HostTips](HostTips/SKILL.md) · [RAW](https://raw.githubusercontent.com/LChatDev/AiSkills/main/HostTips/SKILL.md)
 
+## ThemeFactory — промпт для подключения
+
+Скопируй следующий промпт в своего ИИ-агента:
+
+```text
+Скачай скилл ThemeFactory:
+
+https://raw.githubusercontent.com/LChatDev/AiSkills/main/ThemeFactory/SKILL.md
+
+Прочитай SKILL.md полностью. Если среда поддерживает Agent Skills, установи файл как themefactory/SKILL.md. Иначе используй его как инструкции текущей задачи.
+
+Создавай полноценные системы оформления с каталогом тем, светлым и тёмным режимами, редактором, живым превью и сохранением настроек аккаунтов. При запросе 30 тем реализуй все 30. Проверяй адаптивность, контраст и работоспособность всех страниц.
+
+Сообщи об успешном подключении или конкретной причине, почему оно невозможно.
+```
+
+[Открыть ThemeFactory](ThemeFactory/SKILL.md) · [RAW](https://raw.githubusercontent.com/LChatDev/AiSkills/main/ThemeFactory/SKILL.md)
+
+## NoDatabase — промпт для подключения
+
+Скопируй следующий промпт в своего ИИ-агента:
+
+```text
+Скачай скилл NoDatabase:
+
+https://raw.githubusercontent.com/LChatDev/AiSkills/main/NoDatabase/SKILL.md
+
+Прочитай SKILL.md полностью. Если среда поддерживает Agent Skills, установи файл как nodatabase/SKILL.md. Иначе используй его как инструкции текущей задачи.
+
+Реализуй сайт без MySQL, SQLite и других БД. Используй JSON, TXT и обычные файлы, безопасное файловое хранение, блокировки, атомарные обновления, авторизацию, квоты и резервные копии. Учитывай ограничения PHP-хостинга и проверяй конкурентные операции.
+
+Сообщи об успешном подключении или конкретной причине, почему оно невозможно.
+```
+
+[Открыть NoDatabase](NoDatabase/SKILL.md) · [RAW](https://raw.githubusercontent.com/LChatDev/AiSkills/main/NoDatabase/SKILL.md)
+
+## AppConverter — промпт для подключения
+
+Скопируй следующий промпт в своего ИИ-агента:
+
+```text
+Скачай скилл AppConverter:
+
+https://raw.githubusercontent.com/LChatDev/AiSkills/main/AppConverter/SKILL.md
+
+Прочитай SKILL.md полностью. Если среда поддерживает Agent Skills, установи файл как appconverter/SKILL.md. Иначе используй его как инструкции текущей задачи.
+
+Преврати мой сайт в указанный формат: PWA, Android APK или Windows-приложение. Сохрани функциональность, настрой иконки, навигацию, офлайн-поведение, HTTPS и безопасные разрешения. Собери артефакт при наличии SDK, проверь его и укажи ограничения.
+
+Сообщи об успешном подключении или конкретной причине, почему оно невозможно.
+```
+
+[Открыть AppConverter](AppConverter/SKILL.md) · [RAW](https://raw.githubusercontent.com/LChatDev/AiSkills/main/AppConverter/SKILL.md)
+
+## PHPEncrypt — промпт для подключения
+
+Скопируй следующий промпт в своего ИИ-агента:
+
+```text
+Скачай скилл PHPEncrypt:
+
+https://raw.githubusercontent.com/LChatDev/AiSkills/main/PHPEncrypt/SKILL.md
+
+Прочитай SKILL.md полностью. Если среда поддерживает Agent Skills, установи файл как phpencrypt/SKILL.md. Иначе используй его как инструкции текущей задачи.
+
+Защити мои PHP-исходники от простого копирования с помощью безопасной минификации и переименования подходящих локальных идентификаторов. Сохрани работу API, шаблонов, Composer и совместимость с хостингом. Не используй скрытые загрузчики, eval или обход средств защиты. Сохрани оригинал, создай отдельный dist и проверь синтаксис и тесты.
+
+Сообщи об успешном подключении или конкретной причине, почему оно невозможно.
+```
+
+[Открыть PHPEncrypt](PHPEncrypt/SKILL.md) · [RAW](https://raw.githubusercontent.com/LChatDev/AiSkills/main/PHPEncrypt/SKILL.md)
+
 ## Совместное использование
 
-При разработке приложений с GUI можно подключить оба скилла: AutoDev отвечает за программирование, сборку и тестирование, Interface — за дизайн и пользовательский интерфейс. BackendMaster проектирует и настраивает серверную часть, SecurityTester выполняет защитные проверки, SlopConveyor организует повторяющиеся циклы улучшений, HostTips предлагает практические способы оптимизации хостинга. Для работы по времени нужен отдельный поддерживаемый планировщик или долгоживущий агент.
+При разработке приложений с GUI можно подключить оба скилла: AutoDev отвечает за программирование, сборку и тестирование, Interface — за дизайн и пользовательский интерфейс. BackendMaster проектирует и настраивает серверную часть, SecurityTester выполняет защитные проверки, SlopConveyor организует повторяющиеся циклы улучшений, HostTips предлагает практические способы оптимизации хостинга. ThemeFactory отвечает за темы, NoDatabase — за файловое хранение, AppConverter — за упаковку сайтов в приложения, PHPEncrypt — за защиту собственных PHP-исходников. Для работы по времени нужен отдельный поддерживаемый планировщик или долгоживущий агент.
 
 ## Установка вручную
 
@@ -131,6 +207,6 @@ https://raw.githubusercontent.com/LChatDev/AiSkills/main/HostTips/SKILL.md
 git clone https://github.com/LChatDev/AiSkills.git
 ```
 
-Размести нужные файлы SKILL.md в каталогах скиллов своего агента. Если агент требует совпадения имени папки с полем name в метаданных, используй имена autodev, interface, securitytester, slopconveyor, backendmaster и hosttips.
+Размести нужные файлы SKILL.md в каталогах скиллов своего агента. Если агент требует совпадения имени папки с полем name в метаданных, используй имена autodev, interface, securitytester, slopconveyor, backendmaster, hosttips, themefactory, nodatabase, appconverter и phpencrypt.
 
 Скиллы являются текстовыми инструкциями для ИИ, а не исполняемыми плагинами. Доступные возможности зависят от инструментов конкретного агента.
