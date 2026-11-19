@@ -11,6 +11,7 @@
 | SecurityTester | Защитный аудит кода, API, зависимостей и конфигураций | [SKILL.md](SecurityTester/SKILL.md) |
 | SlopConveyor | Повторяющийся конвейер измеримых улучшений | [SKILL.md](SlopConveyor/SKILL.md) |
 | BackendMaster | Бэкенд, API, хранение, конфигурация и развёртывание | [SKILL.md](BackendMaster/SKILL.md) |
+| HostTips | Лайфхаки для хостингов, VPS, кеширование, экономия ресурсов и диагностика | [SKILL.md](HostTips/SKILL.md) |
 
 ## AutoDev — промпт для подключения
 
@@ -102,9 +103,27 @@ https://raw.githubusercontent.com/LChatDev/AiSkills/main/BackendMaster/SKILL.md
 
 [Открыть BackendMaster](BackendMaster/SKILL.md) · [RAW](https://raw.githubusercontent.com/LChatDev/AiSkills/main/BackendMaster/SKILL.md)
 
+## HostTips — промпт для подключения
+
+Скопируй следующий промпт в своего ИИ-агента:
+
+```text
+Скачай скилл HostTips:
+
+https://raw.githubusercontent.com/LChatDev/AiSkills/main/HostTips/SKILL.md
+
+Прочитай SKILL.md полностью. Если среда поддерживает Agent Skills, установи файл как hosttips/SKILL.md. Иначе используй его как инструкции текущей задачи.
+
+Активируй HostTips. Предлагай практические лайфхаки для моего хостинга: снижение расхода RAM, CPU и диска, кеширование, настройки PHP, VPS, CDN, Minecraft, диагностика, резервные копии и экономия денег. Учитывай мой тариф и ограничения. Для каждого совета объясняй, зачем он нужен, как применить, проверить эффект и при необходимости откатить изменения. Не обходи ограничения провайдера. Если я прошу только советы, не меняй сервер самостоятельно.
+
+Сообщи об успешном подключении или конкретной причине, почему оно невозможно.
+```
+
+[Открыть HostTips](HostTips/SKILL.md) · [RAW](https://raw.githubusercontent.com/LChatDev/AiSkills/main/HostTips/SKILL.md)
+
 ## Совместное использование
 
-При разработке приложений с GUI можно подключить оба скилла: AutoDev отвечает за программирование, сборку и тестирование, Interface — за дизайн и пользовательский интерфейс. BackendMaster проектирует и настраивает серверную часть, SecurityTester выполняет защитные проверки, SlopConveyor организует повторяющиеся циклы улучшений. Для работы по времени нужен отдельный поддерживаемый планировщик или долгоживущий агент.
+При разработке приложений с GUI можно подключить оба скилла: AutoDev отвечает за программирование, сборку и тестирование, Interface — за дизайн и пользовательский интерфейс. BackendMaster проектирует и настраивает серверную часть, SecurityTester выполняет защитные проверки, SlopConveyor организует повторяющиеся циклы улучшений, HostTips предлагает практические способы оптимизации хостинга. Для работы по времени нужен отдельный поддерживаемый планировщик или долгоживущий агент.
 
 ## Установка вручную
 
@@ -112,6 +131,6 @@ https://raw.githubusercontent.com/LChatDev/AiSkills/main/BackendMaster/SKILL.md
 git clone https://github.com/LChatDev/AiSkills.git
 ```
 
-Размести нужные файлы SKILL.md в каталогах скиллов своего агента. Если агент требует совпадения имени папки с полем name в метаданных, используй имена autodev, interface, securitytester, slopconveyor и backendmaster.
+Размести нужные файлы SKILL.md в каталогах скиллов своего агента. Если агент требует совпадения имени папки с полем name в метаданных, используй имена autodev, interface, securitytester, slopconveyor, backendmaster и hosttips.
 
 Скиллы являются текстовыми инструкциями для ИИ, а не исполняемыми плагинами. Доступные возможности зависят от инструментов конкретного агента.
