@@ -1,0 +1,38 @@
+{
+  "provider": "",
+  "documentationUrl": "",
+  "baseUrl": "https://api.example.com",
+  "environment": "mock",
+  "auth": "configure per official docs",
+  "cases": [
+    {
+      "name": "success",
+      "status": "not_run"
+    },
+    {
+      "name": "401 auth failure",
+      "status": "not_run"
+    },
+    {
+      "name": "429 retry-after",
+      "status": "not_run"
+    },
+    {
+      "name": "timeout",
+      "status": "not_run"
+    },
+    {
+      "name": "invalid response schema",
+      "status": "not_run"
+    },
+    {
+      "name": "duplicate webhook",
+      "status": "not_run"
+    },
+    {
+      "name": "pagination or stream termination",
+      "status": "not_run"
+    }
+  ],
+  "notes": "Use authorized sandbox, synthetic data and documented endpoints. Never include secrets."
+}

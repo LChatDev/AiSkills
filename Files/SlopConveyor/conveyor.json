@@ -1,0 +1,16 @@
+{
+  "enabled": false,
+  "intervalMinutes": 30,
+  "maxIterations": 4,
+  "maxTotalMinutes": 120,
+  "maxFilesPerIteration": 8,
+  "branch": "improve/slop-conveyor",
+  "autoMerge": false,
+  "autoDeploy": false,
+  "requireScheduler": true,
+  "stopOnRegression": true,
+  "stopOnNoUsefulChange": true,
+  "allowedScope": [],
+  "baselineCommands": [],
+  "verificationCommands": []
+}

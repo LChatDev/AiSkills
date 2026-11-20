@@ -1,0 +1,23 @@
+{
+  "source": "src",
+  "output": "dist",
+  "mode": "conservative-minify",
+  "preserveOriginal": true,
+  "exclude": [
+    "vendor/**",
+    "*.env",
+    "*.pem",
+    "*.key",
+    "storage/**",
+    "config/secrets.php"
+  ],
+  "preservePublicSymbols": true,
+  "preserveLicenseNotices": true,
+  "allowDynamicExecution": false,
+  "allowHiddenLoaders": false,
+  "verify": [
+    "php -l",
+    "project unit tests",
+    "integration tests"
+  ]
+}

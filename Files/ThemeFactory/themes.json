@@ -1,0 +1,59 @@
+{
+  "version": 1,
+  "defaultTheme": "minimal",
+  "modes": [
+    "system",
+    "light",
+    "dark"
+  ],
+  "themes": [
+    {
+      "id": "minimal",
+      "tokens": {
+        "accent": "#175cd3",
+        "surface": "#ffffff",
+        "text": "#182230"
+      }
+    },
+    {
+      "id": "ocean",
+      "tokens": {
+        "accent": "#086788",
+        "surface": "#eef8ff",
+        "text": "#163447"
+      }
+    },
+    {
+      "id": "forest",
+      "tokens": {
+        "accent": "#23633c",
+        "surface": "#f3f8f2",
+        "text": "#203b2a"
+      }
+    },
+    {
+      "id": "lavender",
+      "tokens": {
+        "accent": "#6941c6",
+        "surface": "#f8f5ff",
+        "text": "#34234f"
+      }
+    },
+    {
+      "id": "amber",
+      "tokens": {
+        "accent": "#925300",
+        "surface": "#fff8e8",
+        "text": "#483200"
+      }
+    },
+    {
+      "id": "midnight",
+      "tokens": {
+        "accent": "#99baff",
+        "surface": "#172030",
+        "text": "#f2f5ff"
+      }
+    }
+  ]
+}

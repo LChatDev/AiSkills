@@ -1,0 +1,35 @@
+{
+  "promptVersion": "",
+  "model": "",
+  "testCases": [
+    {
+      "id": "normal",
+      "input": "",
+      "expected": [],
+      "actual": null,
+      "status": "not_run"
+    },
+    {
+      "id": "edge",
+      "input": "",
+      "expected": [],
+      "actual": null,
+      "status": "not_run"
+    },
+    {
+      "id": "ambiguous",
+      "input": "",
+      "expected": [],
+      "actual": null,
+      "status": "not_run"
+    }
+  ],
+  "criteria": [
+    "requirements",
+    "accuracy",
+    "format",
+    "feasibility",
+    "privacy"
+  ],
+  "notes": "No fabricated test scores."
+}

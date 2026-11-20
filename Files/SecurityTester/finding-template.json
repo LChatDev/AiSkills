@@ -1,0 +1,13 @@
+{
+  "scope": "owned local test environment",
+  "id": "SEC-001",
+  "title": "",
+  "severity": "unrated",
+  "status": "unverified",
+  "location": "",
+  "evidenceRedacted": "",
+  "impact": "",
+  "remediation": "",
+  "regressionTest": "",
+  "verification": "not_run"
+}

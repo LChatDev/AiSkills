@@ -1,0 +1,6 @@
+/* Starter theme tokens. Set data-theme and data-mode on the root. */
+:root { --bg: #fff; --fg: #182230; --accent: #175cd3; --panel: #f4f6f9; }
+[data-theme="ocean"] { --bg: #eef8ff; --fg: #163447; --accent: #086788; --panel: #dceefa; }
+[data-theme="forest"] { --bg: #f3f8f2; --fg: #203b2a; --accent: #23633c; --panel: #e0efe0; }
+[data-mode="dark"] { color-scheme: dark; --bg: #172030; --fg: #f2f5ff; --panel: #222f43; --accent: #99baff; }
+body { background: var(--bg); color: var(--fg); }

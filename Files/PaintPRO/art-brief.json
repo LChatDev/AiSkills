@@ -1,0 +1,24 @@
+{
+  "project": "",
+  "mode": "illustration",
+  "subject": "",
+  "purpose": "",
+  "style": "",
+  "composition": "",
+  "palette": [],
+  "lighting": "",
+  "requiredText": "",
+  "keepUnchanged": [],
+  "avoid": [],
+  "output": {
+    "format": "PNG",
+    "width": 1024,
+    "height": 1024,
+    "transparent": false
+  },
+  "references": [],
+  "review": {
+    "status": "not_run",
+    "notes": []
+  }
+}

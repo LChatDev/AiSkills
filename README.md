@@ -22,6 +22,28 @@
 | PromptMaster | Создание, оптимизация, аудит и тестирование промптов, SKILL.md и агентных инструкций | [SKILL.md](PromptMaster/SKILL.md) |
 | APIConnector | Подключение внешних API, SDK, авторизация, webhooks, стриминг и тестирование | [SKILL.md](APIConnector/SKILL.md) |
 
+## Файлы для скачивания
+
+Для каждого скилла доступны дополнительные ресурсы в [Files](Files/README.md). RAW-ссылки открывают содержимое файла; его можно сохранить локально. Шаблоны не запускаются автоматически и требуют адаптации.
+
+| Скилл | Файлы (RAW) |
+| --- | --- |
+| [AutoDev](Files/AutoDev) | [project-plan.md](https://raw.githubusercontent.com/leosmleol/AiSkills/main/Files/AutoDev/project-plan.md) · [test-report.json](https://raw.githubusercontent.com/leosmleol/AiSkills/main/Files/AutoDev/test-report.json) |
+| [Interface](Files/Interface) | [design-tokens.css](https://raw.githubusercontent.com/leosmleol/AiSkills/main/Files/Interface/design-tokens.css) · [ui-review.md](https://raw.githubusercontent.com/leosmleol/AiSkills/main/Files/Interface/ui-review.md) |
+| [SecurityTester](Files/SecurityTester) | [defensive-audit.md](https://raw.githubusercontent.com/leosmleol/AiSkills/main/Files/SecurityTester/defensive-audit.md) · [finding-template.json](https://raw.githubusercontent.com/leosmleol/AiSkills/main/Files/SecurityTester/finding-template.json) |
+| [SlopConveyor](Files/SlopConveyor) | [conveyor.json](https://raw.githubusercontent.com/leosmleol/AiSkills/main/Files/SlopConveyor/conveyor.json) · [iteration-log.md](https://raw.githubusercontent.com/leosmleol/AiSkills/main/Files/SlopConveyor/iteration-log.md) |
+| [BackendMaster](Files/BackendMaster) | [backend.env.example](https://raw.githubusercontent.com/leosmleol/AiSkills/main/Files/BackendMaster/backend.env.example) · [deployment-checklist.md](https://raw.githubusercontent.com/leosmleol/AiSkills/main/Files/BackendMaster/deployment-checklist.md) |
+| [HostTips](Files/HostTips) | [hosting-audit.md](https://raw.githubusercontent.com/leosmleol/AiSkills/main/Files/HostTips/hosting-audit.md) · [cache-headers.txt](https://raw.githubusercontent.com/leosmleol/AiSkills/main/Files/HostTips/cache-headers.txt) |
+| [ThemeFactory](Files/ThemeFactory) | [themes.json](https://raw.githubusercontent.com/leosmleol/AiSkills/main/Files/ThemeFactory/themes.json) · [theme-template.css](https://raw.githubusercontent.com/leosmleol/AiSkills/main/Files/ThemeFactory/theme-template.css) |
+| [NoDatabase](Files/NoDatabase) | [storage-layout.md](https://raw.githubusercontent.com/leosmleol/AiSkills/main/Files/NoDatabase/storage-layout.md) · [record.schema.json](https://raw.githubusercontent.com/leosmleol/AiSkills/main/Files/NoDatabase/record.schema.json) |
+| [AppConverter](Files/AppConverter) | [manifest.webmanifest](https://raw.githubusercontent.com/leosmleol/AiSkills/main/Files/AppConverter/manifest.webmanifest) · [packaging-checklist.md](https://raw.githubusercontent.com/leosmleol/AiSkills/main/Files/AppConverter/packaging-checklist.md) |
+| [PHPEncrypt](Files/PHPEncrypt) | [protection-scope.json](https://raw.githubusercontent.com/leosmleol/AiSkills/main/Files/PHPEncrypt/protection-scope.json) · [release-checklist.md](https://raw.githubusercontent.com/leosmleol/AiSkills/main/Files/PHPEncrypt/release-checklist.md) |
+| [Replica](Files/Replica) | [parity-matrix.csv](https://raw.githubusercontent.com/leosmleol/AiSkills/main/Files/Replica/parity-matrix.csv) · [reference-brief.md](https://raw.githubusercontent.com/leosmleol/AiSkills/main/Files/Replica/reference-brief.md) |
+| [APKMaster](Files/APKMaster) | [qa-matrix.csv](https://raw.githubusercontent.com/leosmleol/AiSkills/main/Files/APKMaster/qa-matrix.csv) · [release-brief.md](https://raw.githubusercontent.com/leosmleol/AiSkills/main/Files/APKMaster/release-brief.md) |
+| [PaintPRO](Files/PaintPRO) | [art-brief.json](https://raw.githubusercontent.com/leosmleol/AiSkills/main/Files/PaintPRO/art-brief.json) · [visual-qa.md](https://raw.githubusercontent.com/leosmleol/AiSkills/main/Files/PaintPRO/visual-qa.md) |
+| [PromptMaster](Files/PromptMaster) | [prompt-template.md](https://raw.githubusercontent.com/leosmleol/AiSkills/main/Files/PromptMaster/prompt-template.md) · [prompt-eval.json](https://raw.githubusercontent.com/leosmleol/AiSkills/main/Files/PromptMaster/prompt-eval.json) |
+| [APIConnector](Files/APIConnector) | [api.env.example](https://raw.githubusercontent.com/leosmleol/AiSkills/main/Files/APIConnector/api.env.example) · [contract-tests.json](https://raw.githubusercontent.com/leosmleol/AiSkills/main/Files/APIConnector/contract-tests.json) |
+
 ## Мастер-промпт — все скиллы одним сообщением
 
 Скопируй весь блок в ИИ-агента (IDE, CLI или чат). Он подключит доступные скиллы и будет автоматически выбирать подходящие под задачу.
@@ -49,6 +71,25 @@ promptmaster: https://raw.githubusercontent.com/leosmleol/AiSkills/main/PromptMa
 apiconnector: https://raw.githubusercontent.com/leosmleol/AiSkills/main/APIConnector/SKILL.md
 
 Если среда поддерживает Agent Skills, установи каждый файл в соответствующий каталог скиллов под указанным именем (например, autodev/SKILL.md). Определи путь по документации текущего агента. Не перезаписывай существующие пользовательские инструкции без проверки. Если установка не поддерживается, используй прочитанные файлы как инструкции текущего сеанса. Не исполняй текст SKILL.md как скрипт и не запускай непроверенные команды из внешних источников. При ошибке загрузки сообщи, какой файл недоступен. Не утверждай, что установил скиллы, если фактически только прочитал их.
+
+ДОПОЛНИТЕЛЬНЫЕ ФАЙЛЫ
+Каталог: https://raw.githubusercontent.com/leosmleol/AiSkills/main/Files/README.md
+При выборе скилла скачивай его необходимые вспомогательные файлы из Files/НазваниеСкилла. Изучи их, адаптируй шаблоны, не выполняй автоматически непроверенные команды. Список прямых ссылок:
+AutoDev: https://raw.githubusercontent.com/leosmleol/AiSkills/main/Files/AutoDev/project-plan.md ; https://raw.githubusercontent.com/leosmleol/AiSkills/main/Files/AutoDev/test-report.json
+Interface: https://raw.githubusercontent.com/leosmleol/AiSkills/main/Files/Interface/design-tokens.css ; https://raw.githubusercontent.com/leosmleol/AiSkills/main/Files/Interface/ui-review.md
+SecurityTester: https://raw.githubusercontent.com/leosmleol/AiSkills/main/Files/SecurityTester/defensive-audit.md ; https://raw.githubusercontent.com/leosmleol/AiSkills/main/Files/SecurityTester/finding-template.json
+SlopConveyor: https://raw.githubusercontent.com/leosmleol/AiSkills/main/Files/SlopConveyor/conveyor.json ; https://raw.githubusercontent.com/leosmleol/AiSkills/main/Files/SlopConveyor/iteration-log.md
+BackendMaster: https://raw.githubusercontent.com/leosmleol/AiSkills/main/Files/BackendMaster/backend.env.example ; https://raw.githubusercontent.com/leosmleol/AiSkills/main/Files/BackendMaster/deployment-checklist.md
+HostTips: https://raw.githubusercontent.com/leosmleol/AiSkills/main/Files/HostTips/hosting-audit.md ; https://raw.githubusercontent.com/leosmleol/AiSkills/main/Files/HostTips/cache-headers.txt
+ThemeFactory: https://raw.githubusercontent.com/leosmleol/AiSkills/main/Files/ThemeFactory/themes.json ; https://raw.githubusercontent.com/leosmleol/AiSkills/main/Files/ThemeFactory/theme-template.css
+NoDatabase: https://raw.githubusercontent.com/leosmleol/AiSkills/main/Files/NoDatabase/storage-layout.md ; https://raw.githubusercontent.com/leosmleol/AiSkills/main/Files/NoDatabase/record.schema.json
+AppConverter: https://raw.githubusercontent.com/leosmleol/AiSkills/main/Files/AppConverter/manifest.webmanifest ; https://raw.githubusercontent.com/leosmleol/AiSkills/main/Files/AppConverter/packaging-checklist.md
+PHPEncrypt: https://raw.githubusercontent.com/leosmleol/AiSkills/main/Files/PHPEncrypt/protection-scope.json ; https://raw.githubusercontent.com/leosmleol/AiSkills/main/Files/PHPEncrypt/release-checklist.md
+Replica: https://raw.githubusercontent.com/leosmleol/AiSkills/main/Files/Replica/parity-matrix.csv ; https://raw.githubusercontent.com/leosmleol/AiSkills/main/Files/Replica/reference-brief.md
+APKMaster: https://raw.githubusercontent.com/leosmleol/AiSkills/main/Files/APKMaster/qa-matrix.csv ; https://raw.githubusercontent.com/leosmleol/AiSkills/main/Files/APKMaster/release-brief.md
+PaintPRO: https://raw.githubusercontent.com/leosmleol/AiSkills/main/Files/PaintPRO/art-brief.json ; https://raw.githubusercontent.com/leosmleol/AiSkills/main/Files/PaintPRO/visual-qa.md
+PromptMaster: https://raw.githubusercontent.com/leosmleol/AiSkills/main/Files/PromptMaster/prompt-template.md ; https://raw.githubusercontent.com/leosmleol/AiSkills/main/Files/PromptMaster/prompt-eval.json
+APIConnector: https://raw.githubusercontent.com/leosmleol/AiSkills/main/Files/APIConnector/api.env.example ; https://raw.githubusercontent.com/leosmleol/AiSkills/main/Files/APIConnector/contract-tests.json
 
 ШАГ 2. АВТОМАТИЧЕСКИЙ ВЫБОР
 Для каждой задачи автоматически подключай необходимые скиллы:
@@ -105,6 +146,8 @@ https://raw.githubusercontent.com/leosmleol/AiSkills/main/AutoDev/SKILL.md
 
 Активируй AutoDev. Применяй его при создании проектов, добавлении функций, исправлении ошибок, тестировании и сборке программ. Самостоятельно выбирай подходящий режим, используй доступные инструменты и проверяй результат. Не ограничивайся примерами кода, если можешь создать рабочий проект. Не утверждай, что сборка или тесты выполнены, если они не запускались.
 
+Дополнительные файлы для AutoDev: https://raw.githubusercontent.com/leosmleol/AiSkills/main/Files/AutoDev/project-plan.md ; https://raw.githubusercontent.com/leosmleol/AiSkills/main/Files/AutoDev/test-report.json. Скачай нужные для задачи, изучи и адаптируй перед использованием. Не запускай их автоматически.
+
 После подключения сообщи, что скилл прочитан и готов к применению. Если скачать или установить его невозможно, укажи причину.
 ```
 
@@ -122,6 +165,8 @@ https://raw.githubusercontent.com/leosmleol/AiSkills/main/Interface/SKILL.md
 Прочитай SKILL.md полностью. Если твоя среда поддерживает Agent Skills, установи файл как interface/SKILL.md в соответствующую папку скиллов. Если нет — используй его как инструкции для текущей задачи.
 
 Активируй Interface. Применяй его при создании и улучшении GUI, сайтов, мобильных и настольных приложений. Создавай современные минималистичные интерфейсы с единой дизайн-системой, аккуратной типографикой, адаптивностью и доступностью. Используй предоставленные референсы, а при их отсутствии разрабатывай оригинальный дизайн. Проверяй интерфейс на разных размерах экрана и не ломай существующие функции. Если запрошен рабочий GUI, реализуй его в текущем технологическом стеке.
+
+Дополнительные файлы для Interface: https://raw.githubusercontent.com/leosmleol/AiSkills/main/Files/Interface/design-tokens.css ; https://raw.githubusercontent.com/leosmleol/AiSkills/main/Files/Interface/ui-review.md. Скачай нужные для задачи, изучи и адаптируй перед использованием. Не запускай их автоматически.
 
 После подключения сообщи, что скилл прочитан и готов к применению. Если скачать или установить его невозможно, укажи причину.
 ```
@@ -141,6 +186,8 @@ https://raw.githubusercontent.com/leosmleol/AiSkills/main/SecurityTester/SKILL.m
 
 Проверяй только мой проект и явно разрешённый локальный тестовый стенд. Анализируй авторизацию, защиту данных, валидацию, зависимости и настройки. Формируй отчёт с серьёзностью, файлами, причинами и безопасными рекомендациями. Исправляй подтверждённые дефекты по запросу и проверяй регрессии. Не проводи атаки на сторонние системы и не раскрывай секреты.
 
+Дополнительные файлы для SecurityTester: https://raw.githubusercontent.com/leosmleol/AiSkills/main/Files/SecurityTester/defensive-audit.md ; https://raw.githubusercontent.com/leosmleol/AiSkills/main/Files/SecurityTester/finding-template.json. Скачай нужные для задачи, изучи и адаптируй перед использованием. Не запускай их автоматически.
+
 Сообщи об успешном подключении или конкретной причине, почему оно невозможно.
 ```
 
@@ -158,6 +205,8 @@ https://raw.githubusercontent.com/leosmleol/AiSkills/main/SlopConveyor/SKILL.md
 Прочитай SKILL.md полностью. Если твоя среда поддерживает Agent Skills, установи файл как slopconveyor/SKILL.md в соответствующую папку скиллов. Иначе используй его как инструкции текущей задачи.
 
 Активируй конвейер улучшений моего проекта. Каждые 30 минут выполняй один цикл: анализ, выбор полезной задачи, изменение, тестирование, сравнение результата и отчёт. По умолчанию максимум 4 цикла и 120 минут, без автоматического merge или деплоя. Интервал и лимиты можно менять. Если доступен разрешённый планировщик, настрой расписание и способ остановки; иначе выполни один цикл и сообщи ограничение. Не меняй код без практической пользы.
+
+Дополнительные файлы для SlopConveyor: https://raw.githubusercontent.com/leosmleol/AiSkills/main/Files/SlopConveyor/conveyor.json ; https://raw.githubusercontent.com/leosmleol/AiSkills/main/Files/SlopConveyor/iteration-log.md. Скачай нужные для задачи, изучи и адаптируй перед использованием. Не запускай их автоматически.
 
 Сообщи об успешном подключении или конкретной причине, почему оно невозможно.
 ```
@@ -177,6 +226,8 @@ https://raw.githubusercontent.com/leosmleol/AiSkills/main/BackendMaster/SKILL.md
 
 Настрой или создай бэкенд моего проекта с учётом существующего стека и хостинга. Реализуй API, авторизацию, хранилище, обработку ошибок, конфигурацию окружения, тесты и инструкции запуска. Соблюдай требования PHP-only, без Docker или без БД, если они заданы. Не раскрывай секреты и не меняй production без разрешения. Проверь результат и сообщи, что реально запущено.
 
+Дополнительные файлы для BackendMaster: https://raw.githubusercontent.com/leosmleol/AiSkills/main/Files/BackendMaster/backend.env.example ; https://raw.githubusercontent.com/leosmleol/AiSkills/main/Files/BackendMaster/deployment-checklist.md. Скачай нужные для задачи, изучи и адаптируй перед использованием. Не запускай их автоматически.
+
 Сообщи об успешном подключении или конкретной причине, почему оно невозможно.
 ```
 
@@ -194,6 +245,8 @@ https://raw.githubusercontent.com/leosmleol/AiSkills/main/HostTips/SKILL.md
 Прочитай SKILL.md полностью. Если среда поддерживает Agent Skills, установи файл как hosttips/SKILL.md. Иначе используй его как инструкции текущей задачи.
 
 Активируй HostTips. Предлагай практические лайфхаки для моего хостинга: снижение расхода RAM, CPU и диска, кеширование, настройки PHP, VPS, CDN, Minecraft, диагностика, резервные копии и экономия денег. Учитывай мой тариф и ограничения. Для каждого совета объясняй, зачем он нужен, как применить, проверить эффект и при необходимости откатить изменения. Не обходи ограничения провайдера. Если я прошу только советы, не меняй сервер самостоятельно.
+
+Дополнительные файлы для HostTips: https://raw.githubusercontent.com/leosmleol/AiSkills/main/Files/HostTips/hosting-audit.md ; https://raw.githubusercontent.com/leosmleol/AiSkills/main/Files/HostTips/cache-headers.txt. Скачай нужные для задачи, изучи и адаптируй перед использованием. Не запускай их автоматически.
 
 Сообщи об успешном подключении или конкретной причине, почему оно невозможно.
 ```
@@ -213,6 +266,8 @@ https://raw.githubusercontent.com/leosmleol/AiSkills/main/ThemeFactory/SKILL.md
 
 Создавай полноценные системы оформления с каталогом тем, светлым и тёмным режимами, редактором, живым превью и сохранением настроек аккаунтов. При запросе 30 тем реализуй все 30. Проверяй адаптивность, контраст и работоспособность всех страниц.
 
+Дополнительные файлы для ThemeFactory: https://raw.githubusercontent.com/leosmleol/AiSkills/main/Files/ThemeFactory/themes.json ; https://raw.githubusercontent.com/leosmleol/AiSkills/main/Files/ThemeFactory/theme-template.css. Скачай нужные для задачи, изучи и адаптируй перед использованием. Не запускай их автоматически.
+
 Сообщи об успешном подключении или конкретной причине, почему оно невозможно.
 ```
 
@@ -230,6 +285,8 @@ https://raw.githubusercontent.com/leosmleol/AiSkills/main/NoDatabase/SKILL.md
 Прочитай SKILL.md полностью. Если среда поддерживает Agent Skills, установи файл как nodatabase/SKILL.md. Иначе используй его как инструкции текущей задачи.
 
 Реализуй сайт без MySQL, SQLite и других БД. Используй JSON, TXT и обычные файлы, безопасное файловое хранение, блокировки, атомарные обновления, авторизацию, квоты и резервные копии. Учитывай ограничения PHP-хостинга и проверяй конкурентные операции.
+
+Дополнительные файлы для NoDatabase: https://raw.githubusercontent.com/leosmleol/AiSkills/main/Files/NoDatabase/storage-layout.md ; https://raw.githubusercontent.com/leosmleol/AiSkills/main/Files/NoDatabase/record.schema.json. Скачай нужные для задачи, изучи и адаптируй перед использованием. Не запускай их автоматически.
 
 Сообщи об успешном подключении или конкретной причине, почему оно невозможно.
 ```
@@ -249,6 +306,8 @@ https://raw.githubusercontent.com/leosmleol/AiSkills/main/AppConverter/SKILL.md
 
 Преврати мой сайт в указанный формат: PWA, Android APK или Windows-приложение. Сохрани функциональность, настрой иконки, навигацию, офлайн-поведение, HTTPS и безопасные разрешения. Собери артефакт при наличии SDK, проверь его и укажи ограничения.
 
+Дополнительные файлы для AppConverter: https://raw.githubusercontent.com/leosmleol/AiSkills/main/Files/AppConverter/manifest.webmanifest ; https://raw.githubusercontent.com/leosmleol/AiSkills/main/Files/AppConverter/packaging-checklist.md. Скачай нужные для задачи, изучи и адаптируй перед использованием. Не запускай их автоматически.
+
 Сообщи об успешном подключении или конкретной причине, почему оно невозможно.
 ```
 
@@ -266,6 +325,8 @@ https://raw.githubusercontent.com/leosmleol/AiSkills/main/PHPEncrypt/SKILL.md
 Прочитай SKILL.md полностью. Если среда поддерживает Agent Skills, установи файл как phpencrypt/SKILL.md. Иначе используй его как инструкции текущей задачи.
 
 Защити мои PHP-исходники от простого копирования с помощью безопасной минификации и переименования подходящих локальных идентификаторов. Сохрани работу API, шаблонов, Composer и совместимость с хостингом. Не используй скрытые загрузчики, eval или обход средств защиты. Сохрани оригинал, создай отдельный dist и проверь синтаксис и тесты.
+
+Дополнительные файлы для PHPEncrypt: https://raw.githubusercontent.com/leosmleol/AiSkills/main/Files/PHPEncrypt/protection-scope.json ; https://raw.githubusercontent.com/leosmleol/AiSkills/main/Files/PHPEncrypt/release-checklist.md. Скачай нужные для задачи, изучи и адаптируй перед использованием. Не запускай их автоматически.
 
 Сообщи об успешном подключении или конкретной причине, почему оно невозможно.
 ```
@@ -285,6 +346,8 @@ https://raw.githubusercontent.com/leosmleol/AiSkills/main/Replica/SKILL.md
 
 Изучи предоставленный референс максимально подробно. Составь матрицу функций, экранов, игровых механик и состояний. Реализуй наблюдаемое поведение самостоятельно и используй оригинальные или разрешённые ресурсы. Для Roblox проверь строительство, управление, мир и мультиплеер; для сайтов — интерфейс, API и адаптивность; для плагинов — команды, конфигурацию и совместимость. Собери проект в нужном формате и сравни реальную работу с референсом. Укажи отличия и непроверенные функции.
 
+Дополнительные файлы для Replica: https://raw.githubusercontent.com/leosmleol/AiSkills/main/Files/Replica/parity-matrix.csv ; https://raw.githubusercontent.com/leosmleol/AiSkills/main/Files/Replica/reference-brief.md. Скачай нужные для задачи, изучи и адаптируй перед использованием. Не запускай их автоматически.
+
 Сообщи об успешном подключении или конкретной причине, почему оно невозможно.
 ```
 
@@ -302,6 +365,8 @@ https://raw.githubusercontent.com/leosmleol/AiSkills/main/APKMaster/SKILL.md
 Прочитай SKILL.md полностью. Если среда поддерживает Agent Skills, установи файл как apkmaster/SKILL.md. Иначе используй его как инструкции текущей задачи.
 
 Работай как профессиональная Android-студия. Создай законченный красивый продукт: оригинальный GUI, иконка, темы, анимации, полноценные функции, обработка ошибок, адаптивность и доступность. Предпочитай нативный Kotlin/Compose для новых проектов, если это подходит требованиям. Выполни тесты, lint, сборку APK, проверку подписи и установку на эмуляторе или устройстве при наличии среды. Исправь выявленные проблемы. Предоставь реальный APK, исходники, результаты QA и ограничения; не выдумывай успешные проверки.
+
+Дополнительные файлы для APKMaster: https://raw.githubusercontent.com/leosmleol/AiSkills/main/Files/APKMaster/qa-matrix.csv ; https://raw.githubusercontent.com/leosmleol/AiSkills/main/Files/APKMaster/release-brief.md. Скачай нужные для задачи, изучи и адаптируй перед использованием. Не запускай их автоматически.
 
 Сообщи об успешном подключении или конкретной причине, почему оно невозможно.
 ```
@@ -321,6 +386,8 @@ https://raw.githubusercontent.com/leosmleol/AiSkills/main/PaintPRO/SKILL.md
 
 Работай как профессиональная арт-студия: арт-директор, художник, дизайнер, колорист, ретушёр и специалист по контролю качества. Создавай законченные оригинальные рисунки, иллюстрации, логотипы, иконки, пиксель-арт, концепт-арт, игровые текстуры и баннеры. Продумывай композицию, цвет, освещение, перспективу и детали. Используй доступный инструмент генерации или редактирования изображений. Проверь фактический результат, исправь заметные дефекты и соблюдай запрошенные размеры, стиль, текст, формат и прозрачность. Не выдавай описание за созданную картинку или непроверенный результат за проверенный.
 
+Дополнительные файлы для PaintPRO: https://raw.githubusercontent.com/leosmleol/AiSkills/main/Files/PaintPRO/art-brief.json ; https://raw.githubusercontent.com/leosmleol/AiSkills/main/Files/PaintPRO/visual-qa.md. Скачай нужные для задачи, изучи и адаптируй перед использованием. Не запускай их автоматически.
+
 Сообщи об успешном подключении или конкретной причине, почему оно невозможно.
 ```
 
@@ -339,6 +406,8 @@ https://raw.githubusercontent.com/leosmleol/AiSkills/main/PromptMaster/SKILL.md
 
 Работай как профессиональный промпт-инженер. Превращай мои идеи в точные и эффективные промпты для программирования, дизайна, генерации изображений, исследований и ИИ-агентов. Сохраняй все обязательные условия, добавляй полезные критерии приёмки, устраняй противоречия, выбирай подходящие скиллы AiSkills и адаптируй инструкции под доступные инструменты. Проверяй промпты на полноту и однозначность; при доступной модели и разрешении выполняй тестовые прогоны. Выдавай готовый текст для копирования. Не выдумывай результаты проверок.
 
+Дополнительные файлы для PromptMaster: https://raw.githubusercontent.com/leosmleol/AiSkills/main/Files/PromptMaster/prompt-template.md ; https://raw.githubusercontent.com/leosmleol/AiSkills/main/Files/PromptMaster/prompt-eval.json. Скачай нужные для задачи, изучи и адаптируй перед использованием. Не запускай их автоматически.
+
 Сообщи об успешном подключении или конкретной причине, почему оно невозможно.
 ```
 
@@ -356,6 +425,8 @@ https://raw.githubusercontent.com/leosmleol/AiSkills/main/APIConnector/SKILL.md
 Прочитай SKILL.md полностью. Если среда поддерживает Agent Skills, установи файл как apiconnector/SKILL.md. Иначе используй его как инструкции текущей задачи.
 
 Работай как профессиональный инженер API-интеграций. Изучи документацию выбранного сервиса и подключи его к моему проекту. Поддерживай REST, GraphQL, SSE, WebSocket и webhooks по необходимости. Создавай клиенты и SDK, безопасно настраивай авторизацию, обрабатывай ошибки, таймауты, лимиты, пагинацию и потоковые ответы. Поддерживай документированные ИИ API, платежные сервисы, ботов, почту и файловые сервисы. Соблюдай текущий стек, не раскрывай ключи, не выдумывай endpoints и не обходи ограничения провайдера. Предоставляй рабочий код, .env.example, инструкции и результаты фактического тестирования.
+
+Дополнительные файлы для APIConnector: https://raw.githubusercontent.com/leosmleol/AiSkills/main/Files/APIConnector/api.env.example ; https://raw.githubusercontent.com/leosmleol/AiSkills/main/Files/APIConnector/contract-tests.json. Скачай нужные для задачи, изучи и адаптируй перед использованием. Не запускай их автоматически.
 
 Сообщи об успешном подключении или конкретной причине, почему оно невозможно.
 ```

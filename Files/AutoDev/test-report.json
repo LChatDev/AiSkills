@@ -1,0 +1,31 @@
+{
+  "project": "",
+  "revision": "",
+  "environment": {
+    "runtime": "",
+    "platform": ""
+  },
+  "checks": [
+    {
+      "name": "build",
+      "command": "",
+      "status": "not_run",
+      "evidence": ""
+    },
+    {
+      "name": "unit tests",
+      "command": "",
+      "status": "not_run",
+      "evidence": ""
+    },
+    {
+      "name": "integration",
+      "command": "",
+      "status": "not_run",
+      "evidence": ""
+    }
+  ],
+  "artifacts": [],
+  "knownIssues": [],
+  "rollback": ""
+}

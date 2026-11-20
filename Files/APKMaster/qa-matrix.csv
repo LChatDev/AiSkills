@@ -1,0 +1,9 @@
+id,category,scenario,device_or_environment,status,evidence
+1,build,Gradle assembleDebug,,not_run,
+2,unit,Core logic,,not_run,
+3,ui,Main flow,,not_run,
+4,device,Small phone,,not_run,
+5,device,Large font and dark mode,,not_run,
+6,resilience,Restart and network loss,,not_run,
+7,security,Permission and secrets review,,not_run,
+8,release,APK install and launch,,not_run,
