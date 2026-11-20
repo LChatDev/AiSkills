@@ -1,1 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512"><rect width="512" height="512" rx="112" fill="#101d39"/><g transform="translate(256 256)"><circle r="171" fill="#172a4a"/><ellipse rx="157" ry="62" transform="rotate(-35)" stroke="#7bdcff" stroke-width="16" fill="none"/><ellipse rx="157" ry="62" transform="rotate(40)" stroke="#8497ff" stroke-width="10" fill="none"/><circle r="49" fill="#7bdcff"/><circle cx="128" cy="-90" r="16" fill="#fff"/></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-labelledby="t">
+<title id="t">AgentStudio — faceted A mark</title>
+<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#142740"/><stop offset="1" stop-color="#090F20"/></linearGradient><linearGradient id="a" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#BCF5FF"/><stop offset="1" stop-color="#52A7F9"/></linearGradient></defs>
+<rect width="512" height="512" rx="112" fill="url(#bg)"/>
+<rect x="23" y="23" width="466" height="466" rx="90" fill="none" stroke="#334B6E" stroke-width="2"/>
+<path d="M256 88 420 382H339L256 225 173 382H92Z" fill="url(#a)"/>
+<path d="M256 88 256 225 173 382H92Z" fill="#8DD9FF"/>
+<path d="M256 290 300 369H212Z" fill="#D8F6FF"/>
+<circle cx="384" cy="128" r="13" fill="#84E7C7"/>
+</svg>

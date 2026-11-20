@@ -1,11 +1,10 @@
-# Примеры AgentStudio
+# AgentStudio examples — v1.1.0
 
-| Формат | Пример | Статус |
-|---|---|---|
-| SVG | [Баннер](visual/studio100.svg), [иконка](visual/icon.svg) | векторные исходники |
-| PHP | [index.php](php/index.php) | php -l успешно; CLI вывел 2 of 3 example milestones |
-| EXE | [StudioDemo.exe](windows/StudioDemo.exe), [C](windows/demo.c) | x64 PE собран, хеш проверен, запуск Windows не проверен |
-| Android | [Gradle/Java](android/) | исходники; APK не собран: SDK недоступен |
-| Python | [demo.py](python/demo.py), [test_demo.py](python/test_demo.py) | исходники и тесты, запуск не подтверждён |
+Новый визуальный стиль: оригинальная геометрическая монограмма A, тёмно-синий фон, холодный голубой акцент.
 
-PHP: php index.php или php -S localhost:8000 в папке php. Android — README проекта. EXE не подписан, не запускается автоматически. Примеры демонстрационные, не готовые коммерческие продукты.
+- [SVG-иконка](visual/icon.svg) · [SVG-баннер](visual/studio100.svg)
+- [PHP](php/index.php) · [Python](python/demo.py)
+- [Android-проект](android/) — обновлённая иконка (обычная и адаптивная), нативный счётчик.
+- [Windows](windows/) — исходник новой версии EXE с ресурсом иконки. Старый бинарник в репозитории относится к предыдущей версии.
+
+[Releases](https://github.com/leosmleol/AiSkills/releases): APK, EXE, SVG, PNG, ICO, ZIP и другие файлы должны появляться после успешной сборки. Не считать наличие исходников подтверждением APK. APK — debug-подпись, EXE — без сертификата подписи. Никогда не запускай скачанный бинарник автоматически.
