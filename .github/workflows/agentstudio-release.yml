@@ -1,0 +1,96 @@
+name: AgentStudio release
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/agentstudio-release.yml'
+      - 'Files/AgentStudio/examples/**'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: agentstudio-release
+  cancel-in-progress: false
+
+jobs:
+  package:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    env:
+      DEMO: Files/AgentStudio/examples
+      TAG: agentstudio-v1.1.0
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+      - uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '8.9'
+      - name: Install build tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y gcc-mingw-w64-x86-64 binutils-mingw-w64-x86-64 python3-cairosvg python3-pil php-cli zip
+          sdkmanager 'platforms;android-35' 'build-tools;35.0.0'
+      - name: Build and verify Android debug APK
+        run: |
+          gradle -p "$DEMO/android" :app:assembleDebug :app:lintDebug --no-daemon
+          mkdir -p dist
+          cp "$DEMO/android/app/build/outputs/apk/debug/app-debug.apk" dist/Studio100-debug.apk
+          "$ANDROID_HOME/build-tools/35.0.0/apksigner" verify --verbose --print-certs dist/Studio100-debug.apk
+          "$ANDROID_HOME/build-tools/35.0.0/aapt" dump badging dist/Studio100-debug.apk | tee dist/android-info.txt
+      - name: Render icon assets and build Windows EXE
+        run: |
+          cp "$DEMO/visual/icon.svg" dist/Studio100-icon.svg
+          cp "$DEMO/visual/studio100.svg" dist/Studio100-banner.svg
+          /usr/bin/python3 - <<'PY'
+          import cairosvg
+          from PIL import Image
+          cairosvg.svg2png(url='dist/Studio100-icon.svg',write_to='dist/Studio100-icon.png',output_width=512,output_height=512)
+          cairosvg.svg2png(url='dist/Studio100-banner.svg',write_to='dist/Studio100-banner.png',output_width=1200,output_height=675)
+          with Image.open('dist/Studio100-icon.png') as image:
+              image.save('dist/Studio100.ico', sizes=[(16,16),(24,24),(32,32),(48,48),(64,64),(128,128),(256,256)])
+          PY
+          cp dist/Studio100.ico "$DEMO/windows/Studio100.ico"
+          (
+            cd "$DEMO/windows"
+            x86_64-w64-mingw32-windres icon.rc -O coff -o icon.o
+            x86_64-w64-mingw32-gcc -Os -municode -mwindows -s release-demo.c icon.o -o Studio100.exe -luser32
+          )
+          cp "$DEMO/windows/Studio100.exe" dist/Studio100.exe
+          x86_64-w64-mingw32-objdump -f dist/Studio100.exe
+          x86_64-w64-mingw32-objdump -p dist/Studio100.exe > dist/windows-info.txt
+      - name: Package source and examples
+        run: |
+          php -l "$DEMO/php/index.php"
+          php "$DEMO/php/index.php" > dist/Studio100-preview.html
+          (cd "$DEMO/python" && python3 -m unittest test_demo.py)
+          cp "$DEMO/php/index.php" dist/Studio100.php
+          cp "$DEMO/python/demo.py" dist/Studio100.py
+          git archive --format=zip --prefix=AiSkills/ --output=dist/AiSkills.zip HEAD
+          git archive --format=zip --prefix=AgentStudio/ --output=dist/AgentStudio.zip HEAD:AgentStudio
+          git archive --format=zip --prefix=Studio100-Android/ --output=dist/Studio100-Android-source.zip HEAD:Files/AgentStudio/examples/android
+          git archive --format=zip --prefix=Studio100-Windows/ --output=dist/Studio100-Windows-source.zip HEAD:Files/AgentStudio/examples/windows
+          (
+            cd dist
+            sha256sum * > SHA256SUMS.txt
+          )
+      - name: Upload workflow artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: Studio100-v1.1.0
+          path: dist/
+          if-no-files-found: error
+      - name: Publish release
+        run: |
+          if gh release view "$TAG" >/dev/null 2>&1; then
+            echo "Release already exists; leaving its assets intact."
+            exit 0
+          fi
+          gh release create "$TAG" dist/* --target "$GITHUB_SHA" --title 'AgentStudio / AiSkills 1.1.0' --notes 'Build outputs and sources. Android APK is debug-signed; Windows EXE is unsigned. Build, signature verification and static checks completed in CI; execution on physical Android or Windows devices is not certified. Existing releases are not overwritten.'
