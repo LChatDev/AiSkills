@@ -1,0 +1,21 @@
+{
+  "platform": "unknown",
+  "tools": {
+    "readFiles": null,
+    "editFiles": null,
+    "terminal": null,
+    "web": null,
+    "images": null,
+    "artifacts": null,
+    "subagents": null,
+    "scheduler": null
+  },
+  "limits": {
+    "maxPolishPasses": 3,
+    "maxParallelTasks": 4
+  },
+  "permissions": {
+    "production": false,
+    "externalPublish": false
+  }
+}

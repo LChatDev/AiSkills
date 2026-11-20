@@ -1,0 +1,72 @@
+{
+  "statuses": [
+    "pass",
+    "fail",
+    "not_run",
+    "blocked",
+    "not_applicable"
+  ],
+  "gates": [
+    {
+      "id": "requirements",
+      "status": "not_run",
+      "evidence": ""
+    },
+    {
+      "id": "functionality",
+      "status": "not_run",
+      "evidence": ""
+    },
+    {
+      "id": "build",
+      "status": "not_run",
+      "evidence": ""
+    },
+    {
+      "id": "regression",
+      "status": "not_run",
+      "evidence": ""
+    },
+    {
+      "id": "visual",
+      "status": "not_run",
+      "evidence": ""
+    },
+    {
+      "id": "accessibility",
+      "status": "not_run",
+      "evidence": ""
+    },
+    {
+      "id": "security",
+      "status": "not_run",
+      "evidence": ""
+    },
+    {
+      "id": "privacy",
+      "status": "not_run",
+      "evidence": ""
+    },
+    {
+      "id": "performance",
+      "status": "not_run",
+      "evidence": ""
+    },
+    {
+      "id": "compatibility",
+      "status": "not_run",
+      "evidence": ""
+    },
+    {
+      "id": "sources",
+      "status": "not_run",
+      "evidence": ""
+    },
+    {
+      "id": "release",
+      "status": "not_run",
+      "evidence": ""
+    }
+  ],
+  "rule": "Pass requires evidence; never report not_run or blocked as pass."
+}

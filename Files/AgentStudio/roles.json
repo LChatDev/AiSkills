@@ -1,0 +1,156 @@
+{
+  "version": 1,
+  "kind": "100 functional roles, not real workers",
+  "teams": [
+    {
+      "team": "Product",
+      "roles": [
+        "product-lead",
+        "requirements",
+        "scope",
+        "roadmap",
+        "acceptance",
+        "user-research",
+        "business-analysis",
+        "risk-planning",
+        "estimation",
+        "delivery"
+      ]
+    },
+    {
+      "team": "Architecture",
+      "roles": [
+        "architect",
+        "domain-model",
+        "data-model",
+        "api-design",
+        "integration-design",
+        "state-design",
+        "migration",
+        "reliability",
+        "dependency-review",
+        "architecture-review"
+      ]
+    },
+    {
+      "team": "Engineering",
+      "roles": [
+        "backend",
+        "frontend",
+        "mobile",
+        "desktop",
+        "game-engineering",
+        "plugin-engineering",
+        "storage",
+        "integration",
+        "automation",
+        "refactoring"
+      ]
+    },
+    {
+      "team": "Design",
+      "roles": [
+        "art-direction",
+        "ui-design",
+        "ux-design",
+        "design-system",
+        "typography",
+        "layout",
+        "motion",
+        "accessibility",
+        "responsive",
+        "visual-review"
+      ]
+    },
+    {
+      "team": "QA",
+      "roles": [
+        "qa-lead",
+        "unit-tests",
+        "integration-tests",
+        "e2e-tests",
+        "regression",
+        "edge-cases",
+        "compatibility",
+        "test-data",
+        "repro",
+        "acceptance-review"
+      ]
+    },
+    {
+      "team": "Security",
+      "roles": [
+        "auth-review",
+        "input-validation",
+        "secret-review",
+        "privacy-review",
+        "dependency-safety",
+        "config-safety",
+        "permission-review",
+        "logging-review",
+        "backup-review",
+        "defensive-review"
+      ]
+    },
+    {
+      "team": "Performance",
+      "roles": [
+        "profiling",
+        "latency",
+        "memory",
+        "cpu",
+        "network",
+        "cache",
+        "storage-performance",
+        "monitoring",
+        "capacity",
+        "cost-review"
+      ]
+    },
+    {
+      "team": "Release",
+      "roles": [
+        "build",
+        "packaging",
+        "versioning",
+        "ci",
+        "release-notes",
+        "deployment",
+        "rollback",
+        "upgrade",
+        "artifact-review",
+        "maintenance"
+      ]
+    },
+    {
+      "team": "Research",
+      "roles": [
+        "source-review",
+        "documentation",
+        "examples",
+        "localization",
+        "technical-writing",
+        "user-guide",
+        "error-messages",
+        "spec-review",
+        "handoff",
+        "fact-check"
+      ]
+    },
+    {
+      "team": "AI",
+      "roles": [
+        "orchestrator",
+        "prompt-engineer",
+        "skill-router",
+        "capability-check",
+        "context-manager",
+        "model-eval",
+        "tool-contracts",
+        "adapter-review",
+        "final-review",
+        "budget-control"
+      ]
+    }
+  ]
+}

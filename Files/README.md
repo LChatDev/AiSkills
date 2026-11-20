@@ -76,3 +76,8 @@
 
 - [api.env.example](https://raw.githubusercontent.com/leosmleol/AiSkills/main/Files/APIConnector/api.env.example)
 - [contract-tests.json](https://raw.githubusercontent.com/leosmleol/AiSkills/main/Files/APIConnector/contract-tests.json)
+
+## AgentStudio
+
+- [Ресурсы и профили](https://raw.githubusercontent.com/leosmleol/AiSkills/main/Files/AgentStudio/README.md)
+- [Примеры SVG, PHP, EXE, Android и Python](https://raw.githubusercontent.com/leosmleol/AiSkills/main/Files/AgentStudio/examples/README.md)

@@ -1,0 +1,2 @@
+# Android source demo
+Native Java counter with saved state and reset, no network permissions. Needs Android SDK 35, JDK 17, Gradle 8.9 compatible with AGP 8.7.3. Open in Android Studio, sync and Build APK, or run gradle :app:assembleDebug. Output app/build/outputs/apk/debug/app-debug.apk. Wrapper not included. Verify installation, buttons, rotation, system insets, accessibility. Not built here: Android SDK unavailable.

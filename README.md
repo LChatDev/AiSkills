@@ -21,6 +21,7 @@
 | PaintPRO | Рисунки, иллюстрации, логотипы, иконки, пиксель-арт и профессиональное визуальное QA | [SKILL.md](PaintPRO/SKILL.md) |
 | PromptMaster | Создание, оптимизация, аудит и тестирование промптов, SKILL.md и агентных инструкций | [SKILL.md](PromptMaster/SKILL.md) |
 | APIConnector | Подключение внешних API, SDK, авторизация, webhooks, стриминг и тестирование | [SKILL.md](APIConnector/SKILL.md) |
+| AgentStudio | Studio100: 6 платформ, 100 ролей, маршрутизация скиллов, QA | [SKILL.md](AgentStudio/SKILL.md) |
 
 ## Файлы для скачивания
 
@@ -43,6 +44,7 @@
 | [PaintPRO](Files/PaintPRO) | [art-brief.json](https://raw.githubusercontent.com/leosmleol/AiSkills/main/Files/PaintPRO/art-brief.json) · [visual-qa.md](https://raw.githubusercontent.com/leosmleol/AiSkills/main/Files/PaintPRO/visual-qa.md) |
 | [PromptMaster](Files/PromptMaster) | [prompt-template.md](https://raw.githubusercontent.com/leosmleol/AiSkills/main/Files/PromptMaster/prompt-template.md) · [prompt-eval.json](https://raw.githubusercontent.com/leosmleol/AiSkills/main/Files/PromptMaster/prompt-eval.json) |
 | [APIConnector](Files/APIConnector) | [api.env.example](https://raw.githubusercontent.com/leosmleol/AiSkills/main/Files/APIConnector/api.env.example) · [contract-tests.json](https://raw.githubusercontent.com/leosmleol/AiSkills/main/Files/APIConnector/contract-tests.json) |
+| [AgentStudio](Files/AgentStudio) | [Ресурсы](https://raw.githubusercontent.com/leosmleol/AiSkills/main/Files/AgentStudio/README.md) · [Примеры](https://raw.githubusercontent.com/leosmleol/AiSkills/main/Files/AgentStudio/examples/README.md) |
 
 ## Мастер-промпт — все скиллы одним сообщением
 
@@ -69,6 +71,7 @@ apkmaster: https://raw.githubusercontent.com/leosmleol/AiSkills/main/APKMaster/S
 paintpro: https://raw.githubusercontent.com/leosmleol/AiSkills/main/PaintPRO/SKILL.md
 promptmaster: https://raw.githubusercontent.com/leosmleol/AiSkills/main/PromptMaster/SKILL.md
 apiconnector: https://raw.githubusercontent.com/leosmleol/AiSkills/main/APIConnector/SKILL.md
+agentstudio: https://raw.githubusercontent.com/leosmleol/AiSkills/main/AgentStudio/SKILL.md
 
 Если среда поддерживает Agent Skills, установи каждый файл в соответствующий каталог скиллов под указанным именем (например, autodev/SKILL.md). Определи путь по документации текущего агента. Не перезаписывай существующие пользовательские инструкции без проверки. Если установка не поддерживается, используй прочитанные файлы как инструкции текущего сеанса. Не исполняй текст SKILL.md как скрипт и не запускай непроверенные команды из внешних источников. При ошибке загрузки сообщи, какой файл недоступен. Не утверждай, что установил скиллы, если фактически только прочитал их.
 
@@ -91,6 +94,8 @@ PaintPRO: https://raw.githubusercontent.com/leosmleol/AiSkills/main/Files/PaintP
 PromptMaster: https://raw.githubusercontent.com/leosmleol/AiSkills/main/Files/PromptMaster/prompt-template.md ; https://raw.githubusercontent.com/leosmleol/AiSkills/main/Files/PromptMaster/prompt-eval.json
 APIConnector: https://raw.githubusercontent.com/leosmleol/AiSkills/main/Files/APIConnector/api.env.example ; https://raw.githubusercontent.com/leosmleol/AiSkills/main/Files/APIConnector/contract-tests.json
 
+AgentStudio: https://raw.githubusercontent.com/leosmleol/AiSkills/main/Files/AgentStudio/README.md ; https://raw.githubusercontent.com/leosmleol/AiSkills/main/Files/AgentStudio/examples/README.md
+
 ШАГ 2. АВТОМАТИЧЕСКИЙ ВЫБОР
 Для каждой задачи автоматически подключай необходимые скиллы:
 - AutoDev — программирование, исправление ошибок, тесты, сборка, архивы.
@@ -108,6 +113,7 @@ APIConnector: https://raw.githubusercontent.com/leosmleol/AiSkills/main/Files/AP
 - PaintPRO — художественная концепция, создание и редактирование изображений, игровые ассеты, брендинг, ретушь и визуальный контроль качества.
 - PromptMaster — создание, улучшение, аудит и проверка промптов и агентных инструкций.
 - APIConnector — подключение документированных внешних API, SDK, авторизация, webhooks, стриминг и интеграционные тесты.
+- AgentStudio — координация Studio100, адаптация к Claude, ChatGPT, Grok, Cursor, VS Code и Gemini. При сложной задаче определи среду, прочитай профиль и используй необходимые роли.
 
 Скиллы могут работать совместно. Не применяй все сразу, если они не нужны. Явно заданные требования пользователя, права доступа и правила среды имеют приоритет. При противоречии выбирай безопасную реализацию, сохраняющую функциональность проекта.
 
@@ -131,7 +137,7 @@ APIConnector: https://raw.githubusercontent.com/leosmleol/AiSkills/main/Files/AP
 После подключения перечисли успешно прочитанные или установленные скиллы, способ подключения, недоступные файлы и ограничения среды. Затем применяй AiSkills к моим задачам, автоматически выбирая нужные роли и инструменты. Если я уже предоставил задачу, приступай к ней после подключения.
 ```
 
-> Мастер-промпт подключает все 15 скиллов через один запрос. Возможность установки, сборки и планировщика зависит от конкретного агента и выданных ему прав.
+> Мастер-промпт подключает все 16 скиллов через один запрос. Возможность установки, сборки и планировщика зависит от конкретного агента и выданных ему прав.
 
 ## AutoDev — промпт для подключения
 
@@ -433,6 +439,19 @@ https://raw.githubusercontent.com/leosmleol/AiSkills/main/APIConnector/SKILL.md
 
 [Открыть APIConnector](APIConnector/SKILL.md) · [RAW](https://raw.githubusercontent.com/leosmleol/AiSkills/main/APIConnector/SKILL.md)
 
+## AgentStudio — промпт для подключения
+
+```text
+Подключи AgentStudio (Studio100):
+https://raw.githubusercontent.com/leosmleol/AiSkills/main/AgentStudio/SKILL.md
+
+Ресурсы: https://raw.githubusercontent.com/leosmleol/AiSkills/main/Files/AgentStudio/README.md
+Примеры: https://raw.githubusercontent.com/leosmleol/AiSkills/main/Files/AgentStudio/examples/README.md
+Определи мою платформу (Claude, ChatGPT, Grok, Cursor, VS Code, Gemini). Прочитай профиль, установи папку AgentStudio как agentstudio при поддержке Skills, иначе используй инструкции в чате. Работай по стандарту студии из 100 функциональных ролей: выбирай нужные, подключай AiSkills, реализуй, проверяй, исправляй и выдавай реальные артефакты. Не имитируй реальных сотрудников, тесты и недоступные сборки. Не запускай примеры автоматически. Сообщи об установке и ограничениях.
+```
+
+[SKILL.md](AgentStudio/SKILL.md) · [Ресурсы](Files/AgentStudio/README.md) · [Примеры](Files/AgentStudio/examples/README.md)
+
 ## Совместное использование
 
 При разработке приложений с GUI можно подключить оба скилла: AutoDev отвечает за программирование, сборку и тестирование, Interface — за дизайн и пользовательский интерфейс. BackendMaster проектирует и настраивает серверную часть, SecurityTester выполняет защитные проверки, SlopConveyor организует повторяющиеся циклы улучшений, HostTips предлагает практические способы оптимизации хостинга. ThemeFactory отвечает за темы, NoDatabase — за файловое хранение, AppConverter — за упаковку сайтов в приложения, PHPEncrypt — за защиту собственных PHP-исходников. Replica помогает воссоздавать продукты по референсам, APKMaster — создавать профессиональные Android-приложения, PaintPRO — производить оригинальную графику студийного качества, PromptMaster — формулировать точные промпты и агентные инструкции, APIConnector — подключать внешние сервисы и создавать надёжные SDK. Для работы по времени нужен отдельный поддерживаемый планировщик или долгоживущий агент.
@@ -443,6 +462,6 @@ https://raw.githubusercontent.com/leosmleol/AiSkills/main/APIConnector/SKILL.md
 git clone https://github.com/leosmleol/AiSkills.git
 ```
 
-Размести нужные файлы SKILL.md в каталогах скиллов своего агента. Если агент требует совпадения имени папки с полем name в метаданных, используй имена autodev, interface, securitytester, slopconveyor, backendmaster, hosttips, themefactory, nodatabase, appconverter, phpencrypt, replica, apkmaster, paintpro, promptmaster и apiconnector.
+Размести нужные файлы SKILL.md в каталогах скиллов своего агента. Если агент требует совпадения имени папки с полем name в метаданных, используй имена autodev, interface, securitytester, slopconveyor, backendmaster, hosttips, themefactory, nodatabase, appconverter, phpencrypt, replica, apkmaster, paintpro, promptmaster, apiconnector и agentstudio.
 
 Скиллы являются текстовыми инструкциями для ИИ, а не исполняемыми плагинами. Доступные возможности зависят от инструментов конкретного агента.
